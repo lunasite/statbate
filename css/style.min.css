@@ -125,7 +125,7 @@ body._lock {
   padding: 0.5rem 1rem;
   align-items: center;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .header__content {
     transition: all 0.3s ease 0s;
     display: block;
@@ -134,7 +134,7 @@ body._lock {
 .header__logo {
   font-size: 20px;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .header__logo {
     margin-bottom: 10px;
     display: block;
@@ -143,7 +143,7 @@ body._lock {
 .header__mob {
   display: none;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .header__mob {
     padding: 0.5rem 1rem;
     display: flex;
@@ -151,11 +151,24 @@ body._lock {
     align-items: center;
   }
 }
+@media (max-width: 767.98px) {
+  .header__track {
+    display: none;
+  }
+}
+.header__track-mob {
+  display: none;
+}
+@media (max-width: 767.98px) {
+  .header__track-mob {
+    display: block;
+  }
+}
 
 .navbar-nav {
   display: flex;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .navbar-nav {
     display: block;
     margin-bottom: 10px;
@@ -164,10 +177,23 @@ body._lock {
 .navbar-nav li {
   margin-right: 10px;
 }
+.navbar-nav li::after {
+  content: "";
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 767.98px) {
+  .navbar-nav li::after {
+    border: none;
+  }
+}
 .navbar-nav li:last-child {
   margin-right: 0px;
+  padding-right: 0;
 }
-@media (max-width: 991.98px) {
+.navbar-nav li:last-child:after {
+  border: none;
+}
+@media (max-width: 767.98px) {
   .navbar-nav li {
     margin-bottom: 10px;
   }
@@ -178,6 +204,7 @@ body._lock {
 .navbar-nav li a {
   color: rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease 0s;
+  margin-right: 10px;
 }
 .navbar-nav li._active a {
   color: #333333;
@@ -193,7 +220,7 @@ body._lock {
   padding: 0.55rem 0.75rem;
   border-radius: 0.25rem;
 }
-@media (min-width: 991.98px) {
+@media (min-width: 767.98px) {
   .icon-menu-wrap {
     display: none;
   }
@@ -202,7 +229,7 @@ body._lock {
 .icon-menu {
   display: none;
 }
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .icon-menu {
     display: block;
     position: relative;
@@ -246,7 +273,6 @@ body._lock {
   background-color: #d6d8d9;
   text-align: center;
   padding: 0.75rem 1.25rem;
-  margin-bottom: 1rem;
   border: 1px solid #c6c8ca;
   border-radius: 0.25rem;
 }
