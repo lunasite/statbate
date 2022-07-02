@@ -91,6 +91,10 @@ h6 {
 	display: none;
 }
 */
+a {
+  color: #333333;
+}
+
 body {
   color: #333333;
   background: #efefef;
@@ -310,13 +314,85 @@ body._lock {
   display: none;
 }
 
-.content-wrap {
+.content__wrapper {
   width: 100%;
-  height: 100px;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 10px;
+}
+
+.wslog {
+  background-color: #efefef;
+  border-radius: 4px;
+  overflow-y: hidden;
+}
+@media (max-width: 767.98px) {
+  .wslog {
+    height: 150px;
+    order: 2;
+  }
+}
+
+.DonTable > tbody > tr > td,
+.DonTable > tbody > tr > th,
+.DonTable > tfoot > tr > td,
+.DonTable > tfoot > tr > th,
+.DonTable > thead > tr > td,
+.DonTable > thead > tr > th {
+  padding: 0px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 0px;
+}
+
+.wstext {
+  margin-left: 5px;
+  margin-top: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.message {
+  height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+}
+
+.rinfo {
+  margin-left: 20px;
+  width: 35%;
+  border-radius: 4px;
+  float: left;
+}
+
+.block-2 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+@media (max-width: 767.98px) {
+  .block-2 {
+    grid-gap: 10px;
+  }
+}
+.block-2__table {
+  border-radius: 4px;
+  border-collapse: inherit;
+  border: 1px solid #dee2e6;
+  white-space: nowrap;
+  text-align: center;
+  border-spacing: 0;
+}
+.block-2__table th,
+.block-2__table td {
+  border: 1px solid #dee2e6;
+  padding: 6px 25px;
+}
+@media (max-width: 767.98px) {
+  .block-2 {
+    grid-template-columns: 1fr;
+  }
 }
