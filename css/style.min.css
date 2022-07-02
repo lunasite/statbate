@@ -371,7 +371,7 @@ body._lock {
 .block-2 {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 10px;
 }
 @media (max-width: 767.98px) {
   .block-2 {
