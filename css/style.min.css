@@ -327,17 +327,8 @@ body._lock {
   border-bottom: 1px solid #dee2e6;
   padding-bottom: 10px;
 }
-.block-1__txt {
-  display: none;
-}
 @media (max-width: 479.98px) {
-  .block-1__txt {
-    display: block;
-    text-align: center;
-  }
-}
-@media (max-width: 479.98px) {
-  .block-1__content {
+  .block-1 {
     display: none;
   }
 }
