@@ -2,35 +2,35 @@ $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 
 
-	$.extend( $.fn.DataTable.ext.classes, {
+	$.extend($.fn.DataTable.ext.classes, {
 		sWrapper: "dataTables_wrapper dt-bootstrap4",
 		// sFilter: "",
-		sLength: isTabletOrDesktop ? "dataTables_length":'',
-	} );
+		sLength: isTabletOrDesktop ? "dataTables_length" : '',
+	});
 })
 let isTabletOrDesktop = screen.width >= 568;
-if(navigator.userAgent.toLocaleLowerCase().indexOf('iphone') !== -1) {
+if (navigator.userAgent.toLocaleLowerCase().indexOf('iphone') !== -1) {
 	isTabletOrDesktop = false
 }
 console.log('isTabletOrDesktop', isTabletOrDesktop, screen)
 let dataTableOptions = {
 	bAutoWidth: false,
 	oLanguage: {
-		sLengthMenu: isTabletOrDesktop ? "Show _MENU_ entries":"_MENU_",
+		sLengthMenu: isTabletOrDesktop ? "Show _MENU_ entries" : "_MENU_",
 		sSearch: "",
 		sSearchPlaceholder: "Search",
 	},
 	bInfo: isTabletOrDesktop,
 	paging: isTabletOrDesktop,
-	pagingType: isTabletOrDesktop ? 'simple_numbers':'numbers',
-	iDisplayLength: isTabletOrDesktop ? 10:100,
+	pagingType: isTabletOrDesktop ? 'simple_numbers' : 'numbers',
+	iDisplayLength: isTabletOrDesktop ? 10 : 100,
 	order: [[5, "desc"]],
-
-	dom: isTabletOrDesktop ? "<'row'<'col-6'l><'col-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5 d-none d-sm-block'i><'col-sm-12 col-md-7 col-12'p>>":"<'row'<'col-12'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5 d-none d-sm-block'i><'col-sm-12 col-md-7 col-12'p>>"
+	dom: isTabletOrDesktop ? "<'row'<'col-6'l><'col-6'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5 d-none d-sm-block'i><'col-sm-12 col-md-7 col-12'p>>" : "<'row'<'col-12'f>><'row'<'col-sm-12'tr>><'row'<'col-sm-12 col-md-5 d-none d-sm-block'i><'col-sm-12 col-md-7 col-12'p>>"
 };
 
-$(document).ready(function() {
-	$('.select-tab').on('shown.bs.tab', 'a', function(e) {
+
+$(document).ready(function () {
+	$('.select-tab').on('shown.bs.tab', 'a', function (e) {
 		console.log(e.target);
 		$('.select-tab .dropdown-toggle').text($(this).text());
 		if (e.target) {
@@ -38,10 +38,10 @@ $(document).ready(function() {
 		}
 	})
 
-    var table = $("#main").DataTable({
+	var table = $("#main").DataTable({
 		...dataTableOptions,
 		aoColumns: [
-			{"orderable": false, "searchable": false,  "sWidth": "5%" },
+			{ "orderable": false, "searchable": false, "sWidth": "5%" },
 			{ "orderable": false, "sWidth": "35%" },
 			{ "orderable": false, "searchable": false, "sWidth": "15%" },
 			{ "orderable": false, "sWidth": "15%" },
@@ -51,55 +51,55 @@ $(document).ready(function() {
 	});
 });
 
-$(document).ready(function() {
+$(document).ready(function () {
 	var table = $("#couple_table").DataTable({
-		...dataTableOptions,
-		"aoColumns": [
-			{"orderable": false, "searchable": false,  "sWidth": "5%" },
-			{ "orderable": false, "sWidth": "35%" },
-			{ "orderable": false, "searchable": false, "sWidth": "15%" },
-			{ "orderable": false, "sWidth": "15%" },
-			{ "searchable": false, "sWidth": "15%" },
-			{ "searchable": false, "sWidth": "15%" },
-		],
-	});
-});
-
-$(document).ready(function() {
-	var table = $("#boys_table").DataTable({
-		...dataTableOptions,
-		"aoColumns": [
-			{"orderable": false, "searchable": false,  "sWidth": "5%" },
-			{ "orderable": false, "sWidth": "35%" },
-			{ "orderable": false, "searchable": false, "sWidth": "15%" },
-			{ "orderable": false, "sWidth": "15%" },
-			{ "searchable": false, "sWidth": "15%" },
-			{ "searchable": false, "sWidth": "15%" },
-		],
-	});
-});
-
-$(document).ready(function() {
-	var table = $("#trans_table").DataTable({
-		...dataTableOptions,
-		"aoColumns": [
-			{"orderable": false, "searchable": false,  "sWidth": "5%" },
-			{ "orderable": false, "sWidth": "35%" },
-			{ "orderable": false, "searchable": false, "sWidth": "15%" },
-			{ "orderable": false, "sWidth": "15%" },
-			{ "searchable": false, "sWidth": "15%" },
-			{ "searchable": false, "sWidth": "15%" },
-		],
-	});
-});
-
-$(document).ready(function() {
-    var table = $("#top100dons").DataTable({
 		...dataTableOptions,
 		"aoColumns": [
 			{ "orderable": false, "searchable": false, "sWidth": "5%" },
 			{ "orderable": false, "sWidth": "35%" },
-			{ "orderable": false, "searchable": false,"sWidth": "15%" },
+			{ "orderable": false, "searchable": false, "sWidth": "15%" },
+			{ "orderable": false, "sWidth": "15%" },
+			{ "searchable": false, "sWidth": "15%" },
+			{ "searchable": false, "sWidth": "15%" },
+		],
+	});
+});
+
+$(document).ready(function () {
+	var table = $("#boys_table").DataTable({
+		...dataTableOptions,
+		"aoColumns": [
+			{ "orderable": false, "searchable": false, "sWidth": "5%" },
+			{ "orderable": false, "sWidth": "35%" },
+			{ "orderable": false, "searchable": false, "sWidth": "15%" },
+			{ "orderable": false, "sWidth": "15%" },
+			{ "searchable": false, "sWidth": "15%" },
+			{ "searchable": false, "sWidth": "15%" },
+		],
+	});
+});
+
+$(document).ready(function () {
+	var table = $("#trans_table").DataTable({
+		...dataTableOptions,
+		"aoColumns": [
+			{ "orderable": false, "searchable": false, "sWidth": "5%" },
+			{ "orderable": false, "sWidth": "35%" },
+			{ "orderable": false, "searchable": false, "sWidth": "15%" },
+			{ "orderable": false, "sWidth": "15%" },
+			{ "searchable": false, "sWidth": "15%" },
+			{ "searchable": false, "sWidth": "15%" },
+		],
+	});
+});
+
+$(document).ready(function () {
+	var table = $("#top100dons").DataTable({
+		...dataTableOptions,
+		"aoColumns": [
+			{ "orderable": false, "searchable": false, "sWidth": "5%" },
+			{ "orderable": false, "sWidth": "35%" },
+			{ "orderable": false, "searchable": false, "sWidth": "15%" },
 			{ "searchable": false, "sWidth": "15%" },
 			{ "searchable": false, "sWidth": "15%" },
 			{ "searchable": false, "sWidth": "15%" },
@@ -107,7 +107,7 @@ $(document).ready(function() {
 	});
 });
 
-$(document).on("click", "[data-modal-info]", function(e) {
+$(document).on("click", "[data-modal-info]", function (e) {
 	$(this).blur();
 	e.preventDefault();
 
@@ -115,20 +115,20 @@ $(document).on("click", "[data-modal-info]", function(e) {
 	var name = $(this).data('modal-name');
 	var type = $(this).data('modal-type');
 
-	$.post("/public/info.php", {'type': type, 'id': id}, function(json){
+	$.post("/public/info.php", { 'type': type, 'id': id }, function (json) {
 		data = JSON.parse(json);
-		if(data.table.length != 0){
+		if (data.table.length != 0) {
 			$("#donRoomTable tr:first th:first").html(name);
 			$("#donRoomTable tbody").html(data.table);
 			$('#donRoomModal').modal('show');
 		}
 
-		if(data.amount.length != 0){
-			$("#allIncome").html(isTabletOrDesktop ? '<hr />':'');
-			$("#allIncome").append("<center><b>All time "+type+": "+data.amount+" USD</b></center><hr/>");
+		if (data.amount.length != 0) {
+			$("#allIncome").html(isTabletOrDesktop ? '<hr />' : '');
+			$("#allIncome").append("<center><b>All time " + type + ": " + data.amount + " USD</b></center><hr/>");
 		}
 
-		if(data.chart.length != 0 && isTabletOrDesktop){
+		if (data.chart.length != 0 && isTabletOrDesktop) {
 			xx11 = JSON.parse(data.chart);
 			//if(xx11.length > 28){
 			//	xx11.pop();
@@ -154,8 +154,8 @@ $(document).on("click", "[data-modal-info]", function(e) {
 	});
 });
 
-function printWsText(text){
-	if(text.length == 0){
+function printWsText(text) {
+	if (text.length == 0) {
 		return;
 	}
 	date = new Date();
@@ -164,7 +164,7 @@ function printWsText(text){
 	time = date.getHours() + ":" + xMin + ":" + xSec;
 
 	let message = text;
-	if(isTabletOrDesktop) {
+	if (isTabletOrDesktop) {
 		message = '[' + time + '] ' + message;
 	}
 
@@ -176,32 +176,32 @@ function printWsText(text){
 }
 
 function bStat() {
-    var sock = new WebSocket('wss://statbate.com/ws/');
-    sock.onopen = function() {
-        console.log('open');
-        setTimeout(function wsPing() {
-            sock.send('h')
-            setTimeout(wsPing, 60000);
-        }, 60000);
-        $(".wstext").prepend('<div class="message text-center">----------------------------------- last big tips -----------------------------------</div>');
-    };
-    sock.onmessage = function(evt) {
+	var sock = new WebSocket('wss://statbate.com/ws/');
+	sock.onopen = function () {
+		console.log('open');
+		setTimeout(function wsPing() {
+			sock.send('h')
+			setTimeout(wsPing, 60000);
+		}, 60000);
+		$(".wstext").prepend('<div class="message text-center">----------------------------------- last big tips -----------------------------------</div>');
+	};
+	sock.onmessage = function (evt) {
 		j = JSON.parse(evt.data);
-		if(j.count){
-			$(".trackCount").text("track "+j.count+" rooms");
+		if (j.count) {
+			$(".trackCount").text("track " + j.count + " rooms");
 			return;
 		}
-        text = "<a href='https://statbate.com/l/"+j.donator+"' rel='nofollow' target='_blank'>"+j.donator+"</a> send "+j.amount+" tokens to <a href='https://statbate.com/l/"+j.room+"' rel='nofollow' target='_blank'>"+j.room+"</a>";
-        if(j.amount > 499){
-			text = '<font color="#ae8d0b"><b>' +  text + '</b></font>';
+		text = "<a href='https://statbate.com/l/" + j.donator + "' rel='nofollow' target='_blank'>" + j.donator + "</a> send " + j.amount + " tokens to <a href='https://statbate.com/l/" + j.room + "' rel='nofollow' target='_blank'>" + j.room + "</a>";
+		if (j.amount > 499) {
+			text = '<font color="#ae8d0b"><b>' + text + '</b></font>';
 		}
 		printWsText(text);
-    };
-    sock.onclose = function(e) {
+	};
+	sock.onclose = function (e) {
 		console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
-		setTimeout(function() {
+		setTimeout(function () {
 			bStat();
 		}, 1000);
-    };
+	};
 }
 bStat();
