@@ -115,7 +115,7 @@ $(document).on("click", "[data-modal-info]", function (e) {
 	var name = $(this).data('modal-name');
 	var type = $(this).data('modal-type');
 
-	$.post("/public/info.php", { 'type': type, 'id': id }, function (json) {
+	$.post("https://statbate.com/public/info.php", { 'type': type, 'id': id }, function (json) {
 		data = JSON.parse(json);
 		if (data.table.length != 0) {
 			$("#donRoomTable tr:first th:first").html(name);

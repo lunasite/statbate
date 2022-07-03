@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-	<title>Главная</title>
+	<title>Statbate: Chaturbate Top 100</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
@@ -6270,6 +6270,29 @@
 		</div>
 	</div>
 </footer>
+<div class="modal fade" id="donRoomModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" style="max-width: 400px;">
+		<div class="modal-content">
+			<div class="modal-body">
+				<table id="donRoomTable" class="table table-striped DonTable">
+					<thead>
+						<tr>
+							<th></th>
+							<th>USD</th>
+							<th data-toggle="tooltip" data-placement="right" title="Average tip">AVG</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<hr />
+				<div id="modelChart" class="d-none d-md-block" style="margin-top: -25px;"></div>
+				<div id="allIncome"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script>
 	Highcharts.chart('pieStat', {
 		chart: {
