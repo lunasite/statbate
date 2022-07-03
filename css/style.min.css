@@ -320,6 +320,27 @@ body._lock {
   border-color: lightgrey !important;
 }
 
+.dataTable tbody td {
+  text-align: center !important;
+}
+
+@media (max-width: 767px) {
+  #main_filter label {
+    display: block;
+  }
+}
+@media (max-width: 575.98px) {
+  div.dataTables_wrapper div.dataTables_filter input {
+    margin-left: inherit;
+    display: inherit;
+    width: 100%;
+  }
+}
+.table-bordered {
+  border-radius: 4px;
+  border-collapse: inherit;
+}
+
 .content__wrapper {
   width: 100%;
   background: #fff;
@@ -354,6 +375,7 @@ body._lock {
 }
 .block-2 hr {
   display: none;
+  margin: 0;
 }
 @media (max-width: 767.98px) {
   .block-2 hr {
