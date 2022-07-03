@@ -207,7 +207,7 @@
 								</div>
 							</div>
 
-							<br />
+
 
 
 							<div class="tab-content">
@@ -6330,6 +6330,9 @@
 				showInLegend: screen.width < 568
 			}
 		},
+		legend: {
+			itemDistance: 10
+		},
 		series: [{
 			name: 'Income',
 			colorByPoint: true,
@@ -6371,7 +6374,11 @@
 				showInLegend: screen.width < 568
 			}
 		},
+		legend: {
+			itemDistance: 10
+		},
 		series: [{
+			nodeWidth: 20,
 			name: 'Income',
 			colorByPoint: true,
 			data: [{ "name": "Male", "y": 1385 }, { "name": "Female", "y": 4551 }, { "name": "Trans", "y": 535 }, { "name": "Couple", "y": 356 }]
@@ -6411,6 +6418,9 @@
 				},
 				showInLegend: screen.width < 568
 			}
+		},
+		legend: {
+			itemDistance: 10
 		},
 		series: [{
 			name: 'Income',

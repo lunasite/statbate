@@ -15,16 +15,6 @@ body {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 
-.wslog {
-  height: 152px;
-  /*width: 60%;*/
-  /*margin-left: 10px;*/
-  background-color: #efefef;
-  border-radius: 4px;
-  overflow-y: hidden;
-  /*font-size: 14px;*/
-}
-
 .DonTable > tbody > tr > td,
 .DonTable > tbody > tr > th,
 .DonTable > tfoot > tr > td,
@@ -79,6 +69,7 @@ a,
 a:hover,
 a:active {
   color: #333;
+  word-break: break-word;
 }
 
 .page-link {
@@ -102,6 +93,7 @@ table.dataTable tbody td {
 .table td,
 .table th {
   padding: 6px 25px;
+  vertical-align: inherit !important;
 }
 
 table {
@@ -163,7 +155,7 @@ table {
   }
 }
 @media (max-width: 767px) {
-  #main_filter label {
+  .dataTables_filter label {
     display: block;
   }
 }
@@ -320,6 +312,7 @@ body._lock {
   .header__content {
     transition: all 0.3s ease 0s;
     display: block;
+    text-align: right;
   }
 }
 .header__logo {
@@ -466,10 +459,20 @@ body._lock {
   justify-content: space-between;
   color: #6c757d;
 }
-.footer__bottom a {
+.footer a {
   color: #6c757d;
   border-bottom: 1px solid transparent;
 }
+.footer__social {
+  opacity: 0.5;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .footer__social:hover {
+    opacity: 1;
+  }
+}
+
 .page {
   flex: 1 1 auto;
 }
@@ -478,12 +481,30 @@ body._lock {
   display: none;
 }
 
+.dropdown-menu.show {
+  transform: translate3d(0px, 38px, 0px) !important;
+}
+@media (max-width: 575px) {
+  .dropdown-menu.show {
+    transform: translate3d(0px, 26px, 0px) !important;
+  }
+}
+
+.tab-content {
+  margin-top: 16px;
+}
+@media (max-width: 767.98px) {
+  .tab-content {
+    margin-top: 10px;
+  }
+}
+
 .content__wrapper {
   width: 100%;
   background: #fff;
   border-radius: 4px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  padding: 10px;
+  padding: 12px;
 }
 
 .block-1 {
@@ -519,7 +540,7 @@ body._lock {
     width: 100%;
     height: 1px;
     background: #dee2e6;
-    display: block;
+    display: none;
   }
 }
 .block-2__table {
@@ -536,6 +557,12 @@ body._lock {
   padding: 6px 25px;
 }
 @media (max-width: 767.98px) {
+  .block-2__table th,
+.block-2__table td {
+    padding: 6px 10px;
+  }
+}
+@media (max-width: 580px) {
   .block-2 {
     grid-template-columns: 1fr;
   }
@@ -546,9 +573,9 @@ body._lock {
   border-radius: 4px;
   overflow-y: hidden;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 580px) {
   .wslog {
-    height: 150px;
+    height: 95px;
     order: 2;
   }
 }

@@ -183,7 +183,7 @@ function bStat() {
 			sock.send('h')
 			setTimeout(wsPing, 60000);
 		}, 60000);
-		$(".wstext").prepend('<div class="message text-center">----------------------------------- last big tips -----------------------------------</div>');
+		$(".wstext").prepend('');
 	};
 	sock.onmessage = function (evt) {
 		j = JSON.parse(evt.data);
