@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Statbate: Chaturbate Top 100</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="css/metricsgraphics.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<script src="js/d3.min.js"></script>
+	<script src="js/metricsgraphics.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap4.min.js"></script>
+	<!-- <script src="js/highcharts.js"></script> -->
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/heatmap.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+	<script src="js/main.js"></script>
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="header__container _container">
+		<div class="header__mob">
+			<a class="header__track-mob trackCount" href="/">track 1551 rooms</a>
+			<div class="icon-menu-wrap">
+				<div class="icon-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		<div class="header__content ">
+			<a href="/" class="header__logo">$tatbate.com</a>
+			<ul class="header__navbar">
+				<li class="header__nav-item _active">
+					<a class="header__nav-link" href="/">Chaturbate </a>
+				</li>
+				<li class="header__nav-item">
+					<a class="header__nav-link" href="/bonga/">BongaCams</a>
+				</li>
+				<li class="header__nav-item">
+					<!-- <a style="color: green" class="header__nav-link" href="/search.php">Search</a> -->
+					<form class="form-inline my-2 my-lg-0">
+						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+					</form>
+				</li>
+			</ul>
+			<a class="header__track trackCount" href="/">track 1551 rooms</a>
+		</div>
+
+	</div>
+</header>
+		<main class="page">
+			<div class="content">
+
+				<div class="_container">
+					<div class="content__wrapper">
+						<div class="block-desc">
+							<p>We collects data from open sources</p>
+							<ul>
+								<li>room name or nickname</li>
+								<li>chat log</li>
+							</ul>
+							<p>Excluded from rating</p>
+							<ul>
+								<li> rooms with an average tips of more than 50$</li>
+								<li> donators with an average tips of more than 1000$</li>
+							</ul>
+							<p> Tracks rooms where online more than 50 viewers
+								Stop if the online becomes below 25</p>
+							<p> This is a technical page. We use it for debugging
+								Also for you it is proof that the statistics are trust</p>
+							<p>Click on the name of the room to view detailed statistics or click to ID to view logs</p>
+							<p>Today we have 164 uniq users and 1616 hits</p>
+							<p>46 uniq users followed links 203 times</p>
+						</div>
+						<div class="list-block-1">
+							<div class="custom-table">
+								<table>
+									<tbody>
+										<tr>
+											<td>Goroutines</td>
+											<td>817</td>
+										</tr>
+										<tr>
+											<td>Alloc</td>
+											<td>168.24 MB</td>
+										</tr>
+										<tr>
+											<td>HeapSys</td>
+											<td>225.81 MB</td>
+										</tr>
+										<tr>
+											<td>Uptime</td>
+											<td>1 hr</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="custom-table">
+								<table>
+									<tbody>
+										<tr>
+											<td>online more</td>
+											<td>25</td>
+											<td>50</td>
+											<td>100</td>
+										</tr>
+										<tr>
+											<td>rooms</td>
+											<td>1110</td>
+											<td>643</td>
+											<td>340</td>
+										</tr>
+										<tr>
+											<td>total rooms</td>
+											<td colspan="3">4982</td>
+										</tr>
+										<tr>
+											<td>total online</td>
+											<td colspan="3">234385</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="list-block-2">
+							<div class="table-neresponsive">
+								<!-- <div class=" dataTables_wrapper dt-bootstrap4 no-footer "> -->
+								<table id="main" class="table table-striped table-bordered dataTable no-footer"
+									cellspacing="0" width="100%" style="width: 100%;">
+									<thead>
+										<tr class="">
+											<th class="d-none d-sm-table-cell"></th>
+											<th data-toggle="tooltip">room</th>
+											<th data-toggle="tooltip">$ income</th>
+											<th data-toggle="tooltip" title="In minutes">duration</th>
+											<th class="d-none d-sm-table-cell">online</th>
+											<th class="d-none d-sm-table-cell">proxy</th>
+										</tr>
+									</thead>
+
+									<tbody>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">1</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">2</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">3</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">4</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">5</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">6</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">7</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">8</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">9</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">10</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">11</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">12</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+										<tr>
+											<td class="d-none d-sm-table-cell"><a
+													href="https://statbate.com/public/log.php?name=xxx_leila&amp;base=chaturbate"
+													target="_blank">13</a></td>
+											<td><a href="https://statbate.com/search.php?name=xxx_leila"
+													target="_blank">xxx_leila</a></td>
+											<td> 697 </td>
+											<td> 176</td>
+											<td class="d-none d-sm-table-cell">990</td>
+											<td class="d-none d-sm-table-cell">de</td>
+										</tr>
+									</tbody>
+								</table>
+								<!-- </div> -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+		</main>
+		<footer class="footer">
+	<div class="footer__container _container">
+		<div class="footer__top">
+			Telegram <a href="https://t.me/StatbateAnnounceBot" target="_blank">Statbate
+				Announce Bot</a>. Don't miss the broadcast of your favorite model.
+		</div>
+		<div class="footer__bottom">
+			<div class="footer__social">twitter <a href="https://twitter.com/statbate" target="_blank"
+					rel="nofollow">@statbate</a></div>
+			<div class="footer__social"><a href="mailto:statbate@gmail.com">statbate@gmail.com</a>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="modal fade" id="donRoomModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog" style="max-width: 400px;">
+		<div class="modal-content">
+			<div class="modal-body">
+				<table id="donRoomTable" class="table table-striped DonTable">
+					<thead>
+						<tr>
+							<th></th>
+							<th>USD</th>
+							<th data-toggle="tooltip" data-placement="right" title="Average tip">AVG</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<hr />
+				<div id="modelChart" class="d-none d-md-block" style="margin-top: -25px;"></div>
+				<div id="allIncome"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	Highcharts.chart('pieStat', {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'pie'
+		},
+		credits: {
+			enabled: false
+		},
+		title: {
+			text: 'Income distribution for the current month'
+		},
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		accessibility: {
+			point: {
+				valueSuffix: '%'
+			}
+		},
+		plotOptions: {
+			pie: {
+				size: screen.width >= 568 ? null : '80%',
+				colors: ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
+				allowPointSelect: true,
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: true,
+					format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
+				},
+				showInLegend: screen.width < 568
+			}
+		},
+		legend: {
+			itemDistance: 10
+		},
+		series: [{
+			name: 'Income',
+			colorByPoint: true,
+			data: [{ "name": "Boys", "y": 1930709 }, { "name": "Girls", "y": 14641588 }, { "name": "Trans", "y": 1468102 }, { "name": "Couple", "y": 2182527 }]
+		}]
+	});
+
+	Highcharts.chart('pieRooms', {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'pie'
+		},
+		credits: {
+			enabled: false
+		},
+		title: {
+			text: 'Rooms distribution'
+		},
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		accessibility: {
+			point: {
+				valueSuffix: '%'
+			}
+		},
+		plotOptions: {
+			pie: {
+				size: screen.width >= 568 ? null : '80%',
+				colors: ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
+				allowPointSelect: true,
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: true,
+					format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
+				},
+				showInLegend: screen.width < 568
+			}
+		},
+		legend: {
+			itemDistance: 10
+		},
+		series: [{
+			nodeWidth: 20,
+			name: 'Income',
+			colorByPoint: true,
+			data: [{ "name": "Male", "y": 1385 }, { "name": "Female", "y": 4551 }, { "name": "Trans", "y": 535 }, { "name": "Couple", "y": 356 }]
+		}]
+	});
+
+	Highcharts.chart('pieViewers', {
+		chart: {
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false,
+			type: 'pie'
+		},
+		credits: {
+			enabled: false
+		},
+		title: {
+			text: 'Viewers distribution'
+		},
+		tooltip: {
+			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+		},
+		accessibility: {
+			point: {
+				valueSuffix: '%'
+			}
+		},
+		plotOptions: {
+			pie: {
+				size: screen.width >= 568 ? null : '80%',
+				colors: ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
+				allowPointSelect: true,
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: true,
+					format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
+				},
+				showInLegend: screen.width < 568
+			}
+		},
+		legend: {
+			itemDistance: 10
+		},
+		series: [{
+			name: 'Income',
+			colorByPoint: true,
+			data: [{ "name": "Male", "y": 38401 }, { "name": "Female", "y": 195386 }, { "name": "Trans", "y": 23770 }, { "name": "Couple", "y": 38782 }]
+		}]
+	});
+</script>
+<script>
+	function getPointCategoryName(point, dimension) {
+		var series = point.series,
+			isY = dimension === 'y',
+			axis = series[isY ? 'yAxis' : 'xAxis'];
+		return axis.categories[point[isY ? 'y' : 'x']];
+	}
+
+	Highcharts.chart('container-map', {
+
+		chart: {
+			type: 'heatmap',
+			marginTop: 10,
+			marginBottom: 40,
+			plotBorderWidth: 1
+		},
+
+
+		title: {
+			text: ''
+		},
+
+		xAxis: {
+			labels: {
+				enabled: true
+
+			},
+			categories: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+		},
+
+		yAxis: {
+			categories: ['2', '4', '6', '8', '10', '12', '14', '16', '18', '22', '24'],
+			title: null,
+			reversed: true
+		},
+
+		accessibility: {
+			point: {
+				descriptionFormatter: function (point) {
+					var ix = point.index + 1,
+						xName = getPointCategoryName(point, 'x'),
+						yName = getPointCategoryName(point, 'y'),
+						val = point.value;
+					return ix + '. ' + xName + ' sales ' + yName + ', ' + val + '.';
+				}
+			}
+		},
+
+		colorAxis: {
+			min: 50,
+			tickAmount: 10,
+			endOnTick: false,
+			minColor: '#FFFFFF',
+			maxColor: Highcharts.getOptions().colors[0]
+
+		},
+
+		legend: {
+			align: 'right',
+			layout: 'vertical',
+			margin: 0,
+			verticalAlign: 'top',
+			y: 0,
+			x: 15,
+			symbolHeight: 345
+
+		},
+
+		tooltip: {
+			formatter: function () {
+				return '<b>' + getPointCategoryName(this.point, 'x') + '</b> sold <br><b>' +
+					this.point.value + '</b> items on <br><b>' + getPointCategoryName(this.point, 'y') + '</b>';
+			}
+		},
+
+		series: [{
+			name: 'Sales per employee',
+			borderWidth: 1,
+
+			data: [[0, 0, 10], [1, 0, 19], [2, 0, 8], [3, 0, 24], [4, 0, 67], [5, 0, 67], [6, 0, 67], [0, 1, 92], [1, 1, 58], [2, 1, 78], [3, 1, 117], [4, 1, 48], [5, 1, 48], [6, 1, 48], [0, 2, 35], [1, 2, 15], [2, 2, 123], [3, 2, 64], [4, 2, 52], [5, 2, 52], [6, 2, 52], [0, 3, 72], [1, 3, 132], [2, 3, 114], [3, 3, 19], [4, 3, 16], [5, 3, 72], [6, 3, 72], [0, 4, 38], [1, 4, 5], [2, 4, 8], [3, 4, 117], [4, 4, 115], [5, 4, 15], [6, 4, 115], [0, 5, 88], [1, 5, 32], [2, 5, 12], [3, 5, 6], [4, 5, 120], [5, 5, 120], [6, 5, 120], [0, 6, 13], [1, 6, 44], [2, 6, 88], [3, 6, 98], [4, 6, 96], [5, 6, 13], [6, 6, 13], [0, 7, 31], [1, 7, 1], [2, 7, 82], [3, 7, 32], [4, 7, 30], [5, 7, 30], [6, 7, 30], [0, 8, 85], [1, 8, 97], [2, 8, 123], [3, 8, 64], [4, 8, 84], [5, 8, 84], [6, 8, 84], [0, 9, 47], [1, 9, 114], [2, 9, 31], [3, 9, 48], [4, 9, 91], [5, 9, 91], [6, 9, 91], [0, 10, 91], [1, 10, 91], [2, 10, 91], [3, 10, 91], [4, 10, 91], [5, 10, 91], [6, 10, 91]],
+			dataLabels: {
+				enabled: true,
+				color: '#000000'
+			}
+		}],
+
+		responsive: {
+			rules: [{
+				condition: {
+					maxWidth: 500,
+					minHeight: 500
+				},
+				chartOptions: {
+					yAxis: {
+						labels: {
+							formatter: function () {
+								return this.value.charAt(0);
+							}
+						}
+					}
+				}
+			}]
+		}
+
+	});
+</script>
+	</div>
+	
+	<!-- Swiper -->
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<!-- <script src="js/vendors.min.js"></script> -->
+<script src="js/app.min.js"></script>
+</body>
+
+</html>
