@@ -675,3 +675,7 @@ body._lock {
 .highcharts-credits {
   display: none;
 }
+
+.highcharts-a11y-proxy-button {
+  display: none;
+}
