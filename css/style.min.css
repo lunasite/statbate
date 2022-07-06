@@ -752,3 +752,30 @@ body._lock {
     grid-template-columns: 1fr;
   }
 }
+
+.search-desc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 767.98px) {
+  .search-desc {
+    grid-template-columns: 1fr;
+  }
+}
+.search-desc__recent a {
+  display: block;
+}
+.search-desc__recent-ttl {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.search-desc__table table {
+  width: -webkit-fill-available;
+}
+
+.search-tabs td {
+  word-break: break-word;
+}
