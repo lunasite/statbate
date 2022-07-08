@@ -272,6 +272,7 @@ table {
 body {
   color: #333333;
   background: #efefef;
+  transition: all 0.3s ease 0s;
 }
 body._lock {
   overflow: hidden;
@@ -408,6 +409,32 @@ body._lock {
   right: 0;
   padding: 0;
 }
+.header__right {
+  display: flex;
+  align-items: center;
+}
+
+.theme-btn {
+  margin-left: 20px;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.theme-btn svg {
+  width: 20px;
+  height: 20px;
+}
+@media (max-width: 767.98px) {
+  .theme-btn {
+    display: none;
+  }
+  .theme-btn._mob {
+    display: block;
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+
 .icon-menu-wrap {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.55rem 0.75rem;
@@ -526,6 +553,10 @@ body._lock {
 .col-12 .dataTables_filter .form-control.form-control-sm {
   width: 100%;
   margin-left: 0;
+}
+
+.form-inline {
+  justify-content: flex-end;
 }
 
 .content__wrapper {
@@ -778,4 +809,66 @@ body._lock {
 
 .search-tabs td {
   word-break: break-word;
+}
+
+.btn-outline-success {
+  padding: 0px 10px !important;
+}
+
+.dark-theme {
+  color: white;
+  transition: all 0.3s ease 0s;
+  background: #333333;
+}
+.dark-theme a {
+  color: white !important;
+}
+.dark-theme .content__wrapper {
+  background: #383d41;
+}
+.dark-theme .wslog {
+  background: #333333;
+}
+.dark-theme .wslog .message {
+  color: white;
+}
+.dark-theme .nav-tabs .nav-link.active {
+  background: #333333;
+}
+.dark-theme .footer__top {
+  background: #383d41;
+  color: white;
+}
+.dark-theme .pagination li.active a {
+  background: #333333 !important;
+}
+.dark-theme .pagination li a {
+  background: #383d41 !important;
+}
+.dark-theme .mg-y-axis text,
+.dark-theme .mg-x-axis text {
+  fill: white;
+}
+.dark-theme .highcharts-background {
+  fill: #383d41;
+}
+.dark-theme .highcharts-title {
+  color: white !important;
+  fill: white !important;
+}
+.dark-theme .form-control {
+  background: #333333;
+  color: white;
+}
+.dark-theme td {
+  color: white;
+}
+.dark-theme th {
+  color: white;
+}
+.dark-theme .theme-btn svg {
+  color: white;
+}
+.dark-theme .mg-active-datapoint {
+  fill: white;
 }
