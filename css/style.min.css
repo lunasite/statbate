@@ -816,59 +816,72 @@ body._lock {
 }
 
 .dark-theme {
-  color: white;
+  color: #dedefd;
   transition: all 0.3s ease 0s;
-  background: #333333;
+  background: #22223d;
 }
 .dark-theme a {
-  color: white !important;
+  color: #dedefd !important;
 }
 .dark-theme .content__wrapper {
-  background: #383d41;
+  background: #30304d;
 }
 .dark-theme .wslog {
-  background: #333333;
+  background: #22223d;
 }
 .dark-theme .wslog .message {
-  color: white;
+  color: #dedefd;
 }
 .dark-theme .nav-tabs .nav-link.active {
-  background: #333333;
+  background: #22223d;
 }
 .dark-theme .footer__top {
-  background: #383d41;
-  color: white;
+  background: #30304d;
+  color: #dedefd;
 }
 .dark-theme .pagination li.active a {
-  background: #333333 !important;
+  background: #22223d !important;
 }
 .dark-theme .pagination li a {
-  background: #383d41 !important;
+  background: #30304d !important;
 }
 .dark-theme .mg-y-axis text,
 .dark-theme .mg-x-axis text {
-  fill: white;
+  fill: #dedefd;
 }
 .dark-theme .highcharts-background {
-  fill: #383d41;
+  fill: #30304d;
 }
 .dark-theme .highcharts-title {
-  color: white !important;
-  fill: white !important;
+  color: #dedefd !important;
+  fill: #dedefd !important;
 }
 .dark-theme .form-control {
-  background: #333333;
-  color: white;
+  background: #22223d;
+  color: #dedefd;
 }
 .dark-theme td {
-  color: white;
+  color: #dedefd;
 }
 .dark-theme th {
-  color: white;
+  color: #dedefd;
 }
 .dark-theme .theme-btn svg {
-  color: white;
+  color: #dedefd;
 }
 .dark-theme .mg-active-datapoint {
-  fill: white;
+  fill: #dedefd;
+}
+.dark-theme .highcharts-figure text {
+  color: #dedefd !important;
+  fill: #dedefd !important;
+}
+.dark-theme .highcharts-label text {
+  color: #dedefd !important;
+  fill: #dedefd !important;
+}
+.dark-theme .highcharts-text-outline {
+  color: #22223d !important;
+  fill: #22223d !important;
+  stroke: #22223d !important;
 }
