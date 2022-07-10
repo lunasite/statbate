@@ -965,3 +965,19 @@ body._lock {
 .dark-theme .block-2 {
   border-color: rgba(255, 255, 255, 0.1);
 }
+.dark-theme .dropdown-menu.show {
+  background: #22223d;
+}
+.dark-theme .dropdown-menu.show a {
+  color: white;
+}
+.dark-theme .btn-dark:not(:disabled):not(.disabled).active,
+.dark-theme .btn-dark:not(:disabled):not(.disabled):active,
+.dark-theme .show > .btn-dark.dropdown-toggle {
+  background-color: #22223d;
+  border-color: #22223d;
+}
+.dark-theme .btn-dark {
+  background-color: #22223d;
+  border-color: #22223d;
+}
