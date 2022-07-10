@@ -870,6 +870,11 @@ body._lock {
   border-color: #22223d;
   border-radius: 0.25rem;
 }
+.dark-theme .nav-tabs .nav-link:focus,
+.dark-theme .nav-tabs .nav-link:hover {
+  background-color: #22223d;
+  border-color: #22223d;
+}
 .dark-theme .footer__top {
   background: #30304d;
   color: #dedefd;
