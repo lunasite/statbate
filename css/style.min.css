@@ -981,3 +981,11 @@ body._lock {
   background-color: #22223d;
   border-color: #22223d;
 }
+.dark-theme .icon-menu-wrap {
+  background: #30304d;
+  box-shadow: 0px 2px 3px #1a1a2f;
+  border-color: #30304d;
+}
+.dark-theme .icon-menu span {
+  background: #fff;
+}
