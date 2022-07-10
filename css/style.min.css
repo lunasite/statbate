@@ -874,6 +874,8 @@ body._lock {
 .dark-theme .nav-tabs .nav-link:hover {
   background-color: #22223d;
   border-color: #22223d;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease 0s;
 }
 .dark-theme .footer__top {
   background: #30304d;
