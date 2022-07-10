@@ -815,6 +815,18 @@ body._lock {
   padding: 0px 10px !important;
 }
 
+.mg-main-line.mg-line1 {
+  stroke: green;
+}
+
+.mg-main-line.mg-line2 {
+  stroke: #25639a;
+}
+
+.mg-main-line.mg-line3 {
+  stroke: brown;
+}
+
 .dark-theme {
   color: #dedefd;
   transition: all 0.3s ease 0s;
@@ -822,6 +834,20 @@ body._lock {
 }
 .dark-theme a {
   color: #dedefd !important;
+}
+.dark-theme .mg-main-line.mg-line1 {
+  stroke: #fb6b25;
+}
+.dark-theme .mg-main-line.mg-line2 {
+  stroke: #6259ca;
+}
+.dark-theme .mg-main-line.mg-line3 {
+  stroke: #dc3545;
+}
+.dark-theme .btn-outline-success {
+  color: #fff;
+  background-color: #6259ca;
+  border-color: #6259ca;
 }
 .dark-theme .content__wrapper {
   background: #30304d;
@@ -832,18 +858,35 @@ body._lock {
 .dark-theme .wslog .message {
   color: #dedefd;
 }
+.dark-theme .wslog font {
+  color: #fb6b25;
+}
+.dark-theme .nav-tabs {
+  border-bottom: none;
+}
 .dark-theme .nav-tabs .nav-link.active {
   background: #22223d;
+  color: #6259ca !important;
+  border-color: #22223d;
+  border-radius: 0.25rem;
 }
 .dark-theme .footer__top {
   background: #30304d;
   color: #dedefd;
 }
 .dark-theme .pagination li.active a {
-  background: #22223d !important;
+  background: #6259ca !important;
+  border-color: #6259ca !important;
+  color: #dedefd !important;
 }
-.dark-theme .pagination li a {
-  background: #30304d !important;
+.dark-theme .pagination li .page-link {
+  background-color: #2e2e4a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #77778e !important;
+}
+.dark-theme .page-item.disabled .page-link {
+  color: #4f4f67 !important;
+  background-color: #2a2a44 !important;
 }
 .dark-theme .mg-y-axis text,
 .dark-theme .mg-x-axis text {
@@ -884,4 +927,34 @@ body._lock {
   color: #22223d !important;
   fill: #22223d !important;
   stroke: #22223d !important;
+}
+.dark-theme .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.dark-theme .table-bordered th,
+.dark-theme .text-wrap table th,
+.dark-theme .table-bordered td,
+.dark-theme .text-wrap table td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.dark-theme .table-bordered {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dark-theme .form-control {
+  color: #dedefd !important;
+  background-color: #2e2e4a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dark-theme .block-2__table {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.dark-theme .block-2__table th,
+.dark-theme .block-2__table td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.dark-theme .block-1 {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.dark-theme .block-2 {
+  border-color: rgba(255, 255, 255, 0.1);
 }

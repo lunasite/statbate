@@ -23,12 +23,14 @@
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="js/cookie.js"></script>
 
 	<script src="js/main.js"></script>
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -110,6 +112,7 @@
 		</div>
 
 	</div>
+
 </header>
 		<main class="page">
 			<div class="content">
@@ -1631,54 +1634,8 @@
 		</div>
 	</div>
 </div>
-
+<!-- <script src="js/darktheme.js"></script> -->
 <script>
-
-	function getCookie(name) {
-		let matches = document.cookie.match(new RegExp(
-			"(?:^|; )" + name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1') + "=([^;]*)"
-		));
-		return matches ? decodeURIComponent(matches[1]) : undefined;
-	}
-
-	function setCookie(name, value, options = {}) {
-
-		options = {
-			path: '/',
-			// при необходимости добавьте другие значения по умолчанию
-			...options
-		};
-
-		if (options.expires instanceof Date) {
-			options.expires = options.expires.toUTCString();
-		}
-
-		let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
-
-		for (let optionKey in options) {
-			updatedCookie += "; " + optionKey;
-			let optionValue = options[optionKey];
-			if (optionValue !== true) {
-				updatedCookie += "=" + optionValue;
-			}
-		}
-		document.cookie = updatedCookie;
-	}
-	function deleteCookie(name) {
-		setCookie(name, "", {
-			'max-age': -1
-		})
-	}
-
-	let colorTheme = {
-		isDark: false
-	}
-	console.log(document.cookie)
-	if (getCookie('color') == 'dark') {
-		document.body.classList.add('dark-theme')
-		colorTheme.isDark = true
-	}
-
 	document.addEventListener('click', (e) => {
 		if (e.target.closest('.theme-btn')) {
 			document.body.classList.toggle('dark-theme')
@@ -1690,152 +1647,157 @@
 				colorTheme.isDark = false
 			}
 			heatMapInit();
+			heatPie1Init();
+			heatPie2Init();
+			heatPie3Init();
+			showStat();
 		}
 
 	})
 
 
 
+	heatPie1Init();
+	heatPie2Init();
+	heatPie3Init();
+	function heatPie1Init() {
+		Highcharts.chart('pieStat', {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false,
+				type: 'pie'
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: 'Income distribution for the current month'
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			accessibility: {
+				point: {
+					valueSuffix: '%'
+				}
+			},
+			plotOptions: {
+				pie: {
+					size: screen.width >= 568 ? null : '80%',
+					colors: colorTheme.isDark ? ["#fb6b25 ", "#6259ca", "#dc3545", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"] : ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: true,
+						format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
+					},
+					showInLegend: screen.width < 568
+				}
+			},
+			legend: {
+				itemDistance: 10
+			},
+			series: [{
+				name: 'Income',
+				colorByPoint: true,
+				data: [{ "name": "Boys", "y": 1930709 }, { "name": "Girls", "y": 14641588 }, { "name": "Trans", "y": 1468102 }, { "name": "Couple", "y": 2182527 }]
+			}]
+		});
+	}
 
+	function heatPie2Init() {
+		Highcharts.chart('pieRooms', {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false,
+				type: 'pie'
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: 'Rooms distribution'
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			accessibility: {
+				point: {
+					valueSuffix: '%'
+				}
+			},
+			plotOptions: {
+				pie: {
+					size: screen.width >= 568 ? null : '80%',
+					colors: colorTheme.isDark ? ["#fb6b25 ", "#6259ca", "#dc3545", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"] : ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: true,
+						format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
+					},
+					showInLegend: screen.width < 568
+				}
+			},
+			legend: {
+				itemDistance: 10
+			},
+			series: [{
+				nodeWidth: 20,
+				name: 'Income',
+				colorByPoint: true,
+				data: [{ "name": "Male", "y": 1385 }, { "name": "Female", "y": 4551 }, { "name": "Trans", "y": 535 }, { "name": "Couple", "y": 356 }]
+			}]
+		});
+	}
 
-
-
-
-
-
-
-	Highcharts.chart('pieStat', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'pie'
-		},
-		credits: {
-			enabled: false
-		},
-		title: {
-			text: 'Income distribution for the current month'
-		},
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		},
-		accessibility: {
-			point: {
-				valueSuffix: '%'
-			}
-		},
-		plotOptions: {
-			pie: {
-				size: screen.width >= 568 ? null : '80%',
-				colors: ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
-				},
-				showInLegend: screen.width < 568
-			}
-		},
-		legend: {
-			itemDistance: 10
-		},
-		series: [{
-			name: 'Income',
-			colorByPoint: true,
-			data: [{ "name": "Boys", "y": 1930709 }, { "name": "Girls", "y": 14641588 }, { "name": "Trans", "y": 1468102 }, { "name": "Couple", "y": 2182527 }]
-		}]
-	});
-
-	Highcharts.chart('pieRooms', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'pie'
-		},
-		credits: {
-			enabled: false
-		},
-		title: {
-			text: 'Rooms distribution'
-		},
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		},
-		accessibility: {
-			point: {
-				valueSuffix: '%'
-			}
-		},
-		plotOptions: {
-			pie: {
-				size: screen.width >= 568 ? null : '80%',
-				colors: ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
-				},
-				showInLegend: screen.width < 568
-			}
-		},
-		legend: {
-			itemDistance: 10
-		},
-		series: [{
-			nodeWidth: 20,
-			name: 'Income',
-			colorByPoint: true,
-			data: [{ "name": "Male", "y": 1385 }, { "name": "Female", "y": 4551 }, { "name": "Trans", "y": 535 }, { "name": "Couple", "y": 356 }]
-		}]
-	});
-
-	Highcharts.chart('pieViewers', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'pie'
-		},
-		credits: {
-			enabled: false
-		},
-		title: {
-			text: 'Viewers distribution'
-		},
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		},
-		accessibility: {
-			point: {
-				valueSuffix: '%'
-			}
-		},
-		plotOptions: {
-			pie: {
-				size: screen.width >= 568 ? null : '80%',
-				colors: ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
-				},
-				showInLegend: screen.width < 568
-			}
-		},
-		legend: {
-			itemDistance: 10
-		},
-		series: [{
-			name: 'Income',
-			colorByPoint: true,
-			data: [{ "name": "Male", "y": 38401 }, { "name": "Female", "y": 195386 }, { "name": "Trans", "y": 23770 }, { "name": "Couple", "y": 38782 }]
-		}]
-	});
+	function heatPie3Init() {
+		Highcharts.chart('pieViewers', {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false,
+				type: 'pie'
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: 'Viewers distribution'
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			accessibility: {
+				point: {
+					valueSuffix: '%'
+				}
+			},
+			plotOptions: {
+				pie: {
+					size: screen.width >= 568 ? null : '80%',
+					colors: colorTheme.isDark ? ["#fb6b25 ", "#6259ca", "#dc3545", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"] : ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: true,
+						format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
+					},
+					showInLegend: screen.width < 568
+				}
+			},
+			legend: {
+				itemDistance: 10
+			},
+			series: [{
+				name: 'Income',
+				colorByPoint: true,
+				data: [{ "name": "Male", "y": 38401 }, { "name": "Female", "y": 195386 }, { "name": "Trans", "y": 23770 }, { "name": "Couple", "y": 38782 }]
+			}]
+		});
+	}
 </script>
 <script>
 	function getPointCategoryName(point, dimension) {

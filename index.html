@@ -23,15 +23,20 @@
 	<script src="https://code.highcharts.com/modules/exporting.js"></script>
 	<script src="https://code.highcharts.com/modules/export-data.js"></script>
 	<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+	<script src="js/cookie.js"></script>
 
 	<script src="js/main.js"></script>
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
+	<script>
+		let colorTheme = { isDark: false } // Вывести значение переменной через PHP
+	</script>
 	<div class="wrapper">
 		<header class="header">
 	<div class="header__container _container">
@@ -110,6 +115,7 @@
 		</div>
 
 	</div>
+
 </header>
 		<main class="page">
 			<div class="content">
@@ -118,7 +124,6 @@
 					<div class="content__wrapper">
 						<div class="block-1">
 							<div class="block-1__content" id="block-1"></div>
-
 							<script>
 								function showStat() {
 									var hcData = [[{ "date": "2022-04-29", "value": 483773 }, { "date": "2022-04-30", "value": 578048 }, { "date": "2022-05-01", "value": 534937 }, { "date": "2022-05-02", "value": 452752 }, { "date": "2022-05-03", "value": 464496 }, { "date": "2022-05-04", "value": 458166 }, { "date": "2022-05-05", "value": 464913 }, { "date": "2022-05-06", "value": 495191 }, { "date": "2022-05-07", "value": 571866 }, { "date": "2022-05-08", "value": 547703 }, { "date": "2022-05-09", "value": 456717 }, { "date": "2022-05-10", "value": 448373 }, { "date": "2022-05-11", "value": 455069 }, { "date": "2022-05-12", "value": 475863 }, { "date": "2022-05-13", "value": 511744 }, { "date": "2022-05-14", "value": 562966 }, { "date": "2022-05-15", "value": 521220 }, { "date": "2022-05-16", "value": 450519 }, { "date": "2022-05-17", "value": 441559 }, { "date": "2022-05-18", "value": 432698 }, { "date": "2022-05-19", "value": 463888 }, { "date": "2022-05-20", "value": 484902 }, { "date": "2022-05-21", "value": 522599 }, { "date": "2022-05-22", "value": 505393 }, { "date": "2022-05-23", "value": 445681 }, { "date": "2022-05-24", "value": 437531 }, { "date": "2022-05-25", "value": 447191 }, { "date": "2022-05-26", "value": 480046 }, { "date": "2022-05-27", "value": 504080 }, { "date": "2022-05-28", "value": 557113 }, { "date": "2022-05-29", "value": 492931 }, { "date": "2022-05-30", "value": 465387 }, { "date": "2022-05-31", "value": 467401 }, { "date": "2022-06-01", "value": 441726 }, { "date": "2022-06-02", "value": 507559 }, { "date": "2022-06-03", "value": 532847 }, { "date": "2022-06-04", "value": 560936 }, { "date": "2022-06-05", "value": 549890 }, { "date": "2022-06-06", "value": 488661 }, { "date": "2022-06-07", "value": 451764 }, { "date": "2022-06-08", "value": 443923 }, { "date": "2022-06-09", "value": 458724 }, { "date": "2022-06-10", "value": 472793 }, { "date": "2022-06-11", "value": 571947 }, { "date": "2022-06-12", "value": 520647 }, { "date": "2022-06-13", "value": 415459 }, { "date": "2022-06-14", "value": 441188 }, { "date": "2022-06-15", "value": 466779 }, { "date": "2022-06-16", "value": 490465 }, { "date": "2022-06-17", "value": 474659 }, { "date": "2022-06-18", "value": 527551 }, { "date": "2022-06-19", "value": 518072 }, { "date": "2022-06-20", "value": 445768 }, { "date": "2022-06-21", "value": 401168 }, { "date": "2022-06-22", "value": 434268 }, { "date": "2022-06-23", "value": 440596 }, { "date": "2022-06-24", "value": 518420 }, { "date": "2022-06-25", "value": 538883 }, { "date": "2022-06-26", "value": 510833 }, { "date": "2022-06-27", "value": 429210 }, { "date": "2022-06-28", "value": 162811 }], [{ "date": "2022-04-29", "value": 665273 }, { "date": "2022-04-30", "value": 790320 }, { "date": "2022-05-01", "value": 750434 }, { "date": "2022-05-02", "value": 634895 }, { "date": "2022-05-03", "value": 642309 }, { "date": "2022-05-04", "value": 638830 }, { "date": "2022-05-05", "value": 631959 }, { "date": "2022-05-06", "value": 688841 }, { "date": "2022-05-07", "value": 787854 }, { "date": "2022-05-08", "value": 739978 }, { "date": "2022-05-09", "value": 621553 }, { "date": "2022-05-10", "value": 616793 }, { "date": "2022-05-11", "value": 618569 }, { "date": "2022-05-12", "value": 638587 }, { "date": "2022-05-13", "value": 699939 }, { "date": "2022-05-14", "value": 770924 }, { "date": "2022-05-15", "value": 724929 }, { "date": "2022-05-16", "value": 623757 }, { "date": "2022-05-17", "value": 599077 }, { "date": "2022-05-18", "value": 584739 }, { "date": "2022-05-19", "value": 618672 }, { "date": "2022-05-20", "value": 658420 }, { "date": "2022-05-21", "value": 710546 }, { "date": "2022-05-22", "value": 706796 }, { "date": "2022-05-23", "value": 622816 }, { "date": "2022-05-24", "value": 599222 }, { "date": "2022-05-25", "value": 598604 }, { "date": "2022-05-26", "value": 648799 }, { "date": "2022-05-27", "value": 687282 }, { "date": "2022-05-28", "value": 774068 }, { "date": "2022-05-29", "value": 698561 }, { "date": "2022-05-30", "value": 645864 }, { "date": "2022-05-31", "value": 638865 }, { "date": "2022-06-01", "value": 615468 }, { "date": "2022-06-02", "value": 686463 }, { "date": "2022-06-03", "value": 734576 }, { "date": "2022-06-04", "value": 789924 }, { "date": "2022-06-05", "value": 770417 }, { "date": "2022-06-06", "value": 669427 }, { "date": "2022-06-07", "value": 626648 }, { "date": "2022-06-08", "value": 596146 }, { "date": "2022-06-09", "value": 623576 }, { "date": "2022-06-10", "value": 648120 }, { "date": "2022-06-11", "value": 787754 }, { "date": "2022-06-12", "value": 734627 }, { "date": "2022-06-13", "value": 580370 }, { "date": "2022-06-14", "value": 594242 }, { "date": "2022-06-15", "value": 627384 }, { "date": "2022-06-16", "value": 659251 }, { "date": "2022-06-17", "value": 651078 }, { "date": "2022-06-18", "value": 757187 }, { "date": "2022-06-19", "value": 728406 }, { "date": "2022-06-20", "value": 612546 }, { "date": "2022-06-21", "value": 554861 }, { "date": "2022-06-22", "value": 590215 }, { "date": "2022-06-23", "value": 597182 }, { "date": "2022-06-24", "value": 703603 }, { "date": "2022-06-25", "value": 740004 }, { "date": "2022-06-26", "value": 731198 }, { "date": "2022-06-27", "value": 600499 }, { "date": "2022-06-28", "value": 230606 }], [{ "date": "2022-04-29", "value": 181500 }, { "date": "2022-04-30", "value": 212272 }, { "date": "2022-05-01", "value": 215497 }, { "date": "2022-05-02", "value": 182143 }, { "date": "2022-05-03", "value": 177813 }, { "date": "2022-05-04", "value": 180664 }, { "date": "2022-05-05", "value": 167046 }, { "date": "2022-05-06", "value": 193650 }, { "date": "2022-05-07", "value": 215988 }, { "date": "2022-05-08", "value": 192275 }, { "date": "2022-05-09", "value": 164836 }, { "date": "2022-05-10", "value": 168420 }, { "date": "2022-05-11", "value": 163500 }, { "date": "2022-05-12", "value": 162724 }, { "date": "2022-05-13", "value": 188195 }, { "date": "2022-05-14", "value": 207958 }, { "date": "2022-05-15", "value": 203709 }, { "date": "2022-05-16", "value": 173238 }, { "date": "2022-05-17", "value": 157518 }, { "date": "2022-05-18", "value": 152041 }, { "date": "2022-05-19", "value": 154784 }, { "date": "2022-05-20", "value": 173518 }, { "date": "2022-05-21", "value": 187947 }, { "date": "2022-05-22", "value": 201403 }, { "date": "2022-05-23", "value": 177135 }, { "date": "2022-05-24", "value": 161691 }, { "date": "2022-05-25", "value": 151413 }, { "date": "2022-05-26", "value": 168753 }, { "date": "2022-05-27", "value": 183202 }, { "date": "2022-05-28", "value": 216955 }, { "date": "2022-05-29", "value": 205630 }, { "date": "2022-05-30", "value": 180477 }, { "date": "2022-05-31", "value": 171464 }, { "date": "2022-06-01", "value": 173742 }, { "date": "2022-06-02", "value": 178904 }, { "date": "2022-06-03", "value": 201729 }, { "date": "2022-06-04", "value": 228988 }, { "date": "2022-06-05", "value": 220527 }, { "date": "2022-06-06", "value": 180766 }, { "date": "2022-06-07", "value": 174884 }, { "date": "2022-06-08", "value": 152223 }, { "date": "2022-06-09", "value": 164852 }, { "date": "2022-06-10", "value": 175327 }, { "date": "2022-06-11", "value": 215807 }, { "date": "2022-06-12", "value": 213980 }, { "date": "2022-06-13", "value": 164911 }, { "date": "2022-06-14", "value": 153054 }, { "date": "2022-06-15", "value": 160605 }, { "date": "2022-06-16", "value": 168786 }, { "date": "2022-06-17", "value": 176419 }, { "date": "2022-06-18", "value": 229636 }, { "date": "2022-06-19", "value": 210334 }, { "date": "2022-06-20", "value": 166778 }, { "date": "2022-06-21", "value": 153693 }, { "date": "2022-06-22", "value": 155947 }, { "date": "2022-06-23", "value": 156586 }, { "date": "2022-06-24", "value": 185183 }, { "date": "2022-06-25", "value": 201121 }, { "date": "2022-06-26", "value": 220365 }, { "date": "2022-06-27", "value": 171289 }, { "date": "2022-06-28", "value": 67795 }]];
@@ -140,13 +145,13 @@
 										target: '#block-1',
 										x_accessor: 'date',
 										y_accessor: 'value',
-										color: ['green', '#25639a', 'brown'],
+										color: colorTheme.isDark ? ['#fb6b25', '#6259ca', '#dc3545'] : ['green', '#25639a', 'brown'],
 										legend: ['Girls', 'All', 'Other',],
 										area: [false, true, false],
 									});
 								}
 
-								showStat();
+								showStat(); 
 							</script>
 						</div>
 						<div class="block-2">
@@ -6356,54 +6361,8 @@
 		</div>
 	</div>
 </div>
-
+<!-- <script src="js/darktheme.js"></script> -->
 <script>
-
-	function getCookie(name) {
-		let matches = document.cookie.match(new RegExp(
-			"(?:^|; )" + name.replace(/([.$?*|{}()[\]\\/+^])/g, '\\$1') + "=([^;]*)"
-		));
-		return matches ? decodeURIComponent(matches[1]) : undefined;
-	}
-
-	function setCookie(name, value, options = {}) {
-
-		options = {
-			path: '/',
-			// при необходимости добавьте другие значения по умолчанию
-			...options
-		};
-
-		if (options.expires instanceof Date) {
-			options.expires = options.expires.toUTCString();
-		}
-
-		let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
-
-		for (let optionKey in options) {
-			updatedCookie += "; " + optionKey;
-			let optionValue = options[optionKey];
-			if (optionValue !== true) {
-				updatedCookie += "=" + optionValue;
-			}
-		}
-		document.cookie = updatedCookie;
-	}
-	function deleteCookie(name) {
-		setCookie(name, "", {
-			'max-age': -1
-		})
-	}
-
-	let colorTheme = {
-		isDark: false
-	}
-	console.log(document.cookie)
-	if (getCookie('color') == 'dark') {
-		document.body.classList.add('dark-theme')
-		colorTheme.isDark = true
-	}
-
 	document.addEventListener('click', (e) => {
 		if (e.target.closest('.theme-btn')) {
 			document.body.classList.toggle('dark-theme')
@@ -6415,152 +6374,157 @@
 				colorTheme.isDark = false
 			}
 			heatMapInit();
+			heatPie1Init();
+			heatPie2Init();
+			heatPie3Init();
+			showStat();
 		}
 
 	})
 
 
 
+	heatPie1Init();
+	heatPie2Init();
+	heatPie3Init();
+	function heatPie1Init() {
+		Highcharts.chart('pieStat', {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false,
+				type: 'pie'
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: 'Income distribution for the current month'
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			accessibility: {
+				point: {
+					valueSuffix: '%'
+				}
+			},
+			plotOptions: {
+				pie: {
+					size: screen.width >= 568 ? null : '80%',
+					colors: colorTheme.isDark ? ["#fb6b25 ", "#6259ca", "#dc3545", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"] : ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: true,
+						format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
+					},
+					showInLegend: screen.width < 568
+				}
+			},
+			legend: {
+				itemDistance: 10
+			},
+			series: [{
+				name: 'Income',
+				colorByPoint: true,
+				data: [{ "name": "Boys", "y": 1930709 }, { "name": "Girls", "y": 14641588 }, { "name": "Trans", "y": 1468102 }, { "name": "Couple", "y": 2182527 }]
+			}]
+		});
+	}
 
+	function heatPie2Init() {
+		Highcharts.chart('pieRooms', {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false,
+				type: 'pie'
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: 'Rooms distribution'
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			accessibility: {
+				point: {
+					valueSuffix: '%'
+				}
+			},
+			plotOptions: {
+				pie: {
+					size: screen.width >= 568 ? null : '80%',
+					colors: colorTheme.isDark ? ["#fb6b25 ", "#6259ca", "#dc3545", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"] : ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: true,
+						format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
+					},
+					showInLegend: screen.width < 568
+				}
+			},
+			legend: {
+				itemDistance: 10
+			},
+			series: [{
+				nodeWidth: 20,
+				name: 'Income',
+				colorByPoint: true,
+				data: [{ "name": "Male", "y": 1385 }, { "name": "Female", "y": 4551 }, { "name": "Trans", "y": 535 }, { "name": "Couple", "y": 356 }]
+			}]
+		});
+	}
 
-
-
-
-
-
-
-	Highcharts.chart('pieStat', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'pie'
-		},
-		credits: {
-			enabled: false
-		},
-		title: {
-			text: 'Income distribution for the current month'
-		},
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		},
-		accessibility: {
-			point: {
-				valueSuffix: '%'
-			}
-		},
-		plotOptions: {
-			pie: {
-				size: screen.width >= 568 ? null : '80%',
-				colors: ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
-				},
-				showInLegend: screen.width < 568
-			}
-		},
-		legend: {
-			itemDistance: 10
-		},
-		series: [{
-			name: 'Income',
-			colorByPoint: true,
-			data: [{ "name": "Boys", "y": 1930709 }, { "name": "Girls", "y": 14641588 }, { "name": "Trans", "y": 1468102 }, { "name": "Couple", "y": 2182527 }]
-		}]
-	});
-
-	Highcharts.chart('pieRooms', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'pie'
-		},
-		credits: {
-			enabled: false
-		},
-		title: {
-			text: 'Rooms distribution'
-		},
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		},
-		accessibility: {
-			point: {
-				valueSuffix: '%'
-			}
-		},
-		plotOptions: {
-			pie: {
-				size: screen.width >= 568 ? null : '80%',
-				colors: ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
-				},
-				showInLegend: screen.width < 568
-			}
-		},
-		legend: {
-			itemDistance: 10
-		},
-		series: [{
-			nodeWidth: 20,
-			name: 'Income',
-			colorByPoint: true,
-			data: [{ "name": "Male", "y": 1385 }, { "name": "Female", "y": 4551 }, { "name": "Trans", "y": 535 }, { "name": "Couple", "y": 356 }]
-		}]
-	});
-
-	Highcharts.chart('pieViewers', {
-		chart: {
-			plotBackgroundColor: null,
-			plotBorderWidth: null,
-			plotShadow: false,
-			type: 'pie'
-		},
-		credits: {
-			enabled: false
-		},
-		title: {
-			text: 'Viewers distribution'
-		},
-		tooltip: {
-			pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-		},
-		accessibility: {
-			point: {
-				valueSuffix: '%'
-			}
-		},
-		plotOptions: {
-			pie: {
-				size: screen.width >= 568 ? null : '80%',
-				colors: ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
-				allowPointSelect: true,
-				cursor: 'pointer',
-				dataLabels: {
-					enabled: true,
-					format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
-				},
-				showInLegend: screen.width < 568
-			}
-		},
-		legend: {
-			itemDistance: 10
-		},
-		series: [{
-			name: 'Income',
-			colorByPoint: true,
-			data: [{ "name": "Male", "y": 38401 }, { "name": "Female", "y": 195386 }, { "name": "Trans", "y": 23770 }, { "name": "Couple", "y": 38782 }]
-		}]
-	});
+	function heatPie3Init() {
+		Highcharts.chart('pieViewers', {
+			chart: {
+				plotBackgroundColor: null,
+				plotBorderWidth: null,
+				plotShadow: false,
+				type: 'pie'
+			},
+			credits: {
+				enabled: false
+			},
+			title: {
+				text: 'Viewers distribution'
+			},
+			tooltip: {
+				pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+			},
+			accessibility: {
+				point: {
+					valueSuffix: '%'
+				}
+			},
+			plotOptions: {
+				pie: {
+					size: screen.width >= 568 ? null : '80%',
+					colors: colorTheme.isDark ? ["#fb6b25 ", "#6259ca", "#dc3545", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"] : ["#434348", "#7cb5ec", "#90ed7d", "#f7a35c", "#8085e9", "#f15c80", "#e4d354", "#2b908f", "#f45b5b", "#91e8e1"],
+					allowPointSelect: true,
+					cursor: 'pointer',
+					dataLabels: {
+						enabled: true,
+						format: screen.width >= 568 ? '<b>{point.name}</b>: {point.percentage:.1f} %' : '{point.percentage:.1f} %'
+					},
+					showInLegend: screen.width < 568
+				}
+			},
+			legend: {
+				itemDistance: 10
+			},
+			series: [{
+				name: 'Income',
+				colorByPoint: true,
+				data: [{ "name": "Male", "y": 38401 }, { "name": "Female", "y": 195386 }, { "name": "Trans", "y": 23770 }, { "name": "Couple", "y": 38782 }]
+			}]
+		});
+	}
 </script>
 <script>
 	function getPointCategoryName(point, dimension) {
