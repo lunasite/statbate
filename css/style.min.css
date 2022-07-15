@@ -729,7 +729,7 @@ body._lock {
 
 .highcharts-figure .chart-container {
   width: 250px;
-  height: 130px;
+  height: 128px;
   float: left;
   border-radius: 4px;
   overflow: hidden;
@@ -848,6 +848,9 @@ body._lock {
 .list-block-1 table {
   background: white;
   width: -webkit-fill-available;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  overflow: hidden;
 }
 @media (max-width: 600px) {
   .list-block-1 {
@@ -858,18 +861,16 @@ body._lock {
   }
 }
 .list-block-1__wrapper {
-  height: 130px;
+  height: 128px;
   position: relative;
 }
-@media (min-width: 600px) {
-  .list-block-1__wrapper .chart-container {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
-    width: 100%;
-  }
+.list-block-1__wrapper .chart-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
 .search-desc {
@@ -1079,4 +1080,15 @@ body._lock {
 }
 .dark-theme .highcharts-figure .chart-container .highcharts-background {
   fill: #22223d;
+}
+.dark-theme .custom-table {
+  background: #30304d;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.dark-theme .custom-table table {
+  background: #30304d;
+}
+.dark-theme .custom-table th,
+.dark-theme .custom-table td {
+  border-color: rgba(255, 255, 255, 0.1);
 }
