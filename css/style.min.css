@@ -731,6 +731,12 @@ body._lock {
   width: 300px;
   height: 150px;
   float: left;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0px 0px 41px 0px rgba(34, 60, 80, 0.2);
+}
+.highcharts-figure .chart-container .highcharts-background {
+  fill: #efefef;
 }
 
 .highcharts-figure,
@@ -841,6 +847,9 @@ body._lock {
 @media (max-width: 600px) {
   .list-block-1 {
     grid-template-columns: 1fr;
+  }
+  .list-block-1 .custom-table {
+    order: 2;
   }
 }
 
@@ -1048,4 +1057,7 @@ body._lock {
 }
 .dark-theme .icon-menu span {
   background: #fff;
+}
+.dark-theme .highcharts-figure .chart-container .highcharts-background {
+  fill: #22223d;
 }

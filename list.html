@@ -15,7 +15,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.dataTables.min.js"></script>
 	<script src="js/dataTables.bootstrap4.min.js"></script>
-	<script src="js/datatables.rowspan.js"></script>
+	<!-- <script src="js/datatables.rowspan.js"></script> -->
 	<!-- <script src="js/highcharts.js"></script> -->
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<script src="https://code.highcharts.com/modules/heatmap.js"></script>
@@ -357,6 +357,26 @@
 	</div>
 </div>
 <!-- <script src="js/darktheme.js"></script> -->
+<script>
+	document.addEventListener('click', (e) => {
+		if (e.target.closest('.theme-btn')) {
+			document.body.classList.toggle('dark-theme')
+			if (document.body.classList.contains('dark-theme')) {
+				setCookie('color', 'dark')
+				colorTheme.isDark = true
+			} else {
+				setCookie('color', 'light')
+				colorTheme.isDark = false
+			}
+			heatMapInit();
+			heatPie1Init();
+			heatPie2Init();
+			heatPie3Init();
+			showStat();
+		}
+
+	})
+</script>
 		<script>
 			// Solid gauge
 			var gaugeOptions = {
