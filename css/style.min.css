@@ -841,7 +841,13 @@ body._lock {
   margin-bottom: 10px;
   align-items: center;
 }
+.list-block-1 .custom-table {
+  padding: 18px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  background: #efefef;
+}
 .list-block-1 table {
+  background: white;
   width: -webkit-fill-available;
 }
 @media (max-width: 600px) {
@@ -850,7 +856,11 @@ body._lock {
   }
   .list-block-1 .custom-table {
     order: 2;
+    padding: 10px;
   }
+}
+.list-block-1 .highcharts-figure {
+  margin: auto 0px auto auto;
 }
 
 .search-desc {
