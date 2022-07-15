@@ -733,8 +733,7 @@ body._lock {
   float: left;
   border-radius: 4px;
   overflow: hidden;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.02);
-  border: 1px solid #e2e2e2;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
 .highcharts-figure .chart-container .highcharts-background {
   fill: #efefef;
