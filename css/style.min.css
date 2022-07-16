@@ -900,6 +900,29 @@ body._lock {
   width: -webkit-fill-available;
 }
 
+.table-neresponsive {
+  position: relative;
+}
+
+.promo-block {
+  position: absolute;
+  height: 31px;
+  max-width: 100%;
+  background: #efefef;
+  display: block;
+  border-radius: 6px;
+  left: 176px;
+  right: 205px;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+@media (max-width: 767.98px) {
+  .promo-block {
+    display: none;
+  }
+}
+
 .search-tabs td {
   word-break: break-word;
 }
