@@ -903,7 +903,7 @@ body._lock {
 .table-neresponsive {
   position: relative;
 }
-.table-neresponsive .form-control-sm [type=search] {
+.table-neresponsive .form-control-sm[type=search] {
   width: 195px !important;
 }
 
