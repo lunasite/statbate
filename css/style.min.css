@@ -906,6 +906,11 @@ body._lock {
 .table-neresponsive .form-control-sm[type=search] {
   width: 195px !important;
 }
+@media (max-width: 767.98px) {
+  .table-neresponsive .form-control-sm[type=search] {
+    width: 100% !important;
+  }
+}
 
 .promo-block {
   position: absolute;
