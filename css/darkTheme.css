@@ -1,0 +1,182 @@
+.dark-theme {
+    color: #dedefd;
+    transition: all 0.3s ease 0s;
+    background: #22223d;
+  }
+  .dark-theme a {
+    color: #dedefd !important;
+  }
+  .dark-theme .mg-main-line.mg-line1 {
+    stroke: #fb6b25;
+  }
+  .dark-theme .mg-main-line.mg-line2 {
+    stroke: #6259ca;
+  }
+  .dark-theme .mg-main-line.mg-line3 {
+    stroke: #dc3545;
+  }
+  .dark-theme .btn-outline-success {
+    color: #fff;
+    background-color: #6259ca;
+    border-color: #6259ca;
+  }
+  .dark-theme .content__wrapper {
+    background: #30304d;
+  }
+  .dark-theme .wslog {
+    background: #22223d;
+  }
+  .dark-theme .wslog .message {
+    color: #dedefd;
+  }
+  .dark-theme .wslog font {
+    color: #fb6b25;
+  }
+  .dark-theme .nav-tabs {
+    border-bottom: none;
+  }
+  .dark-theme .nav-tabs .nav-link.active {
+    background: #22223d;
+    color: #6259ca !important;
+    border-color: #22223d;
+    border-radius: 0.25rem;
+  }
+  .dark-theme .nav-tabs .nav-link:focus,
+  .dark-theme .nav-tabs .nav-link:hover {
+    background-color: #22223d;
+    border-color: #22223d;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease 0s;
+  }
+  .dark-theme .footer__top {
+    background: #30304d;
+    color: #dedefd;
+  }
+  .dark-theme .pagination li.active a {
+    background: #6259ca !important;
+    border-color: #6259ca !important;
+    color: #dedefd !important;
+  }
+  .dark-theme .pagination li .page-link {
+    background-color: #2e2e4a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #77778e !important;
+  }
+  .dark-theme .page-item.disabled .page-link {
+    color: #4f4f67 !important;
+    background-color: #2a2a44 !important;
+  }
+  .dark-theme .mg-y-axis text,
+  .dark-theme .mg-x-axis text {
+    fill: #dedefd;
+  }
+  .dark-theme .highcharts-background {
+    fill: #30304d;
+  }
+  .dark-theme .highcharts-title {
+    color: #dedefd !important;
+    fill: #dedefd !important;
+  }
+  .dark-theme .form-control {
+    background: #22223d;
+    color: #dedefd;
+  }
+  .dark-theme td {
+    color: #dedefd;
+  }
+  .dark-theme th {
+    color: #dedefd;
+  }
+  .dark-theme .theme-btn svg {
+    color: #dedefd;
+  }
+  .dark-theme .mg-active-datapoint {
+    fill: #dedefd;
+  }
+  .dark-theme .highcharts-figure text {
+    color: #dedefd !important;
+    fill: #dedefd !important;
+  }
+  .dark-theme .highcharts-label text {
+    color: #dedefd !important;
+    fill: #dedefd !important;
+  }
+  .dark-theme .highcharts-text-outline {
+    color: #22223d !important;
+    fill: #22223d !important;
+    stroke: #22223d !important;
+  }
+  .dark-theme .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .dark-theme .table-bordered th,
+  .dark-theme .text-wrap table th,
+  .dark-theme .table-bordered td,
+  .dark-theme .text-wrap table td {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .dark-theme .table-bordered {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .dark-theme .form-control {
+    color: #dedefd !important;
+    background-color: #2e2e4a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .dark-theme .block-2__table {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .dark-theme .block-2__table th,
+  .dark-theme .block-2__table td {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .dark-theme .block-1 {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .dark-theme .block-2 {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .dark-theme .dropdown-menu.show {
+    background: #22223d;
+  }
+  .dark-theme .dropdown-menu.show a {
+    color: white;
+  }
+  .dark-theme .btn-dark:not(:disabled):not(.disabled).active,
+  .dark-theme .btn-dark:not(:disabled):not(.disabled):active,
+  .dark-theme .show > .btn-dark.dropdown-toggle {
+    background-color: #22223d;
+    border-color: #22223d;
+  }
+  .dark-theme .btn-dark {
+    background-color: #22223d;
+    border-color: #22223d;
+  }
+  .dark-theme .icon-menu-wrap {
+    background: #30304d;
+    box-shadow: 0px 2px 3px #1a1a2f;
+    border-color: #30304d;
+  }
+  .dark-theme .icon-menu span {
+    background: #fff;
+  }
+  .dark-theme .highcharts-figure .chart-container .highcharts-background {
+    fill: #22223d;
+  }
+  .dark-theme .custom-table {
+    background: #30304d;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .dark-theme .custom-table table {
+    background: #30304d;
+  }
+  .dark-theme .custom-table th,
+  .dark-theme .custom-table td {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .dark-theme .list-block-1 .custom-table {
+    background: #30304d;
+  }
+  .dark-theme .list-block-1__wrapper {
+    background: #30304d;
+  }
