@@ -931,6 +931,13 @@ body._lock {
   bottom: 0;
   z-index: 1;
   overflow: hidden;
+  opacity: 0.25;
+  transition: all 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .promo-block:hover {
+    opacity: 1;
+  }
 }
 .promo-block img {
   object-fit: cover;
