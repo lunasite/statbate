@@ -38,6 +38,7 @@ $(document).ready(function () {
 		}
 	})
 
+
 	var table = $("#main").DataTable({
 		...dataTableOptions,
 		aoColumns: [
@@ -243,6 +244,7 @@ $(document).ready(function () {
 		],
 	});
 });
+
 $(document).ready(function () {
 	var table = $("#search2").DataTable({
 		...dataTableOptions,
