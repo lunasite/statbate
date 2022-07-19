@@ -301,7 +301,6 @@ body._lock {
   }
 }
 
-
 .header a {
   color: #333333;
 }
@@ -543,9 +542,18 @@ body._lock {
   display: none;
 }
 
+.btn-dark {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
 a {
   text-decoration: none;
   color: black;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 .nav-tabs .nav-link {
@@ -582,6 +590,10 @@ a {
 
 .form-inline {
   justify-content: flex-end;
+}
+
+table.dataTable {
+  margin-top: 16px !important;
 }
 
 .content__wrapper {
@@ -644,6 +656,10 @@ a {
   .block-2 {
     grid-template-columns: 1fr;
   }
+}
+
+.block-3 .nav-tabs {
+  justify-content: center !important;
 }
 
 .dropdown-toggle {
