@@ -301,6 +301,8 @@ body._lock {
   }
 }
 
+
+
 .header a {
   color: #333333;
 }
@@ -571,7 +573,7 @@ a:hover {
 }
 
 .tab-content {
-  margin-top: 16px;
+  margin-top: 10px;
 }
 @media (max-width: 767.98px) {
   .tab-content {
@@ -593,7 +595,7 @@ a:hover {
 }
 
 table.dataTable {
-  margin-top: 16px !important;
+  margin-top: 10px !important;
 }
 
 .content__wrapper {
