@@ -302,7 +302,6 @@ body._lock {
 }
 
 
-
 .header a {
   color: #333333;
 }
@@ -949,8 +948,8 @@ a {
   max-width: 100%;
   display: block;
   border-radius: 6px;
-  left: 190px;
-  right: 220px;
+  left: 170px;
+  right: 205px;
   top: 0;
   bottom: 0;
   z-index: 1;
