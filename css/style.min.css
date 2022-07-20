@@ -93,7 +93,7 @@ table.dataTable tbody td {
 .table td,
 .table th {
   padding: 6px 20px;
-  vertical-align: inherit !important;
+  vertical-align: middle;
 }
 
 table {
@@ -604,6 +604,10 @@ table.dataTable {
 
 .page-link:hover {
   text-decoration: none;
+}
+
+.sorting_disabled:nth-child(2) {
+  width: 50% !important;
 }
 
 .content__wrapper {
