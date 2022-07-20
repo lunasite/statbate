@@ -598,6 +598,11 @@ table.dataTable {
   margin-top: 10px !important;
 }
 
+.form-control:focus {
+  border-color: #ced4da;
+  box-shadow: none;
+}
+
 .content__wrapper {
   background: #fff;
   border-radius: 4px;
