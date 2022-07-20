@@ -302,7 +302,6 @@ body._lock {
 }
 
 
-
 .header a {
   color: #333333;
 }
@@ -598,7 +597,8 @@ table.dataTable {
   margin-top: 10px !important;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
   border-color: #ced4da;
   box-shadow: none;
 }
