@@ -95,6 +95,12 @@ table.dataTable tbody td {
   padding: 6px 20px;
   vertical-align: middle;
 }
+@media (max-width: 767.98px) {
+  .table td,
+.table th {
+    padding: 4px 12px;
+  }
+}
 
 table {
   border-radius: 4px;
@@ -674,6 +680,9 @@ table.dataTable {
 @media (max-width: 767.98px) {
   .block-3 .sorting_disabled:nth-child(2) {
     width: 50% !important;
+  }
+  .block-3 .sorting_disabled:nth-child(4) {
+    width: 25% !important;
   }
 }
 
