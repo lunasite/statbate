@@ -87,7 +87,7 @@ th {
 
 table.dataTable tbody th,
 table.dataTable tbody td {
-  padding: 6px 10px;
+  padding: 6px 12px;
 }
 
 .table td,
@@ -95,6 +95,22 @@ table.dataTable tbody td {
   padding: 6px 20px;
   vertical-align: middle;
 }
+
+@media (max-width: 767.98px) {
+  .dataTables_wrapper .sorting_disabled:nth-child(2) {
+    width: 50% !important;
+  }
+  .dataTables_wrapper .sorting_disabled:nth-child(3) {
+    width: 25% !important;
+  }
+  .dataTables_wrapper .sorting_disabled:nth-child(4) {
+    width: 25% !important;
+  }
+
+
+
+}
+
 @media (max-width: 767.98px) {
   .table td,
 .table th {
@@ -306,6 +322,8 @@ body._lock {
     padding: 0 10px;
   }
 }
+
+
 
 .header a {
   color: #333333;
@@ -521,7 +539,7 @@ body._lock {
   border-bottom: 1px solid transparent;
 }
 .footer__bottom {
-  padding: 1rem 0;
+  padding: 12px 0;
   display: flex;
   justify-content: space-between;
   color: #6c757d;
@@ -577,7 +595,7 @@ a:hover {
 }
 
 .tab-content {
-  margin-top: 10px;
+  margin-top: 12px;
 }
 @media (max-width: 767.98px) {
   .tab-content {
@@ -600,16 +618,6 @@ a:hover {
 
 table.dataTable {
   margin-top: 10px !important;
-}
-
-.form-control:focus,
-.form-select:focus {
-  border-color: #ced4da;
-  box-shadow: none;
-}
-
-.page-link:hover {
-  text-decoration: none;
 }
 
 .content__wrapper {
@@ -676,14 +684,6 @@ table.dataTable {
 
 .block-3 .nav-tabs {
   justify-content: center !important;
-}
-@media (max-width: 767.98px) {
-  .block-3 .sorting_disabled:nth-child(2) {
-    width: 50% !important;
-  }
-  .block-3 .sorting_disabled:nth-child(4) {
-    width: 25% !important;
-  }
 }
 
 .dropdown-toggle {
@@ -958,7 +958,7 @@ table.dataTable {
   }
 }
 .search-desc__recent a {
-  display: block;
+  //display: block;
 }
 .search-desc__recent-ttl {
   font-size: 18px;
@@ -1051,4 +1051,14 @@ table.dataTable {
 .table > :not(:last-child) > :last-child > * {
   border-bottom-color: #dee2e6 !important;
   text-align: center;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #ced4da;
+  box-shadow: none;
+}
+
+.page-link:hover {
+  text-decoration: none;
 }
