@@ -1003,6 +1003,7 @@ table.dataTable {
   .search-desc__table {
     grid-column-start: 1;
     grid-column-end: 3;
+    order: -1;
   }
 }
 .search-desc__table table {
@@ -1028,6 +1029,11 @@ table.dataTable {
 .search-desc__table table td {
   line-height: 1.1;
   padding: 2px 10px;
+}
+@media (max-width: 767.98px) {
+  .search-desc__table table td {
+    width: 50%;
+  }
 }
 
 .table-neresponsive {
