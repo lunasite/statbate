@@ -969,10 +969,11 @@ table.dataTable {
 }
 .search-desc__recent a {
   display: block;
-  padding: 2px 10px;
   border-bottom: 1px solid #dee2e6;
   border-left: 1px solid #dee2e6;
   border-right: 1px solid #dee2e6;
+  line-height: 1.1;
+  padding: 2px 10px;
   text-align: center;
   background: white;
 }
@@ -980,17 +981,16 @@ table.dataTable {
   border-radius: 0px 0px 4px 4px;
 }
 .search-desc__recent a:nth-child(2n) {
-  background: #efefef;
+  background: #f3f3f3;
 }
 .search-desc__recent-ttl {
   font-size: 15px;
   text-align: center;
-  padding: 1px 10px;
+  padding: 4px 10px;
   border-radius: 4px 4px 0px 0px;
   background: white;
   font-weight: 700;
   border: 1px solid #dee2e6;
-  line-height: 1.1;
 }
 .search-desc__table {
   background: #efefef;
@@ -1012,6 +1012,22 @@ table.dataTable {
   border-radius: 4px;
   border: 1px solid #dee2e6;
   overflow: hidden;
+}
+.search-desc__table table thead tr {
+  background: white;
+}
+.search-desc__table table tr {
+  background: #f3f3f3;
+}
+.search-desc__table table tr:nth-child(2n) {
+  background: white;
+}
+.search-desc__table table th {
+  padding: 4px 10px;
+}
+.search-desc__table table td {
+  line-height: 1.1;
+  padding: 2px 10px;
 }
 
 .table-neresponsive {
